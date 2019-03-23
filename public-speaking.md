@@ -3,7 +3,13 @@ layout: default
 title: Public Speaking
 ---
 
-## Here are all the talks I've given till date:
+## Upcoming:
+- Leveling up as an Android Dev
+  - [Droidcon Boston](https://www.droidcon-boston.com/)
+  - April 9 2019, Boston
+
+
+## Past:
 ### 2019
 
 - Introduction
@@ -26,7 +32,10 @@ title: Public Speaking
   - September 22 2018, Nairobi
   
 ### 2017  
-  
+
+- [not so random android developer advice](https://speakerdeck.com/moyheen/not-so-random-android-developer-advice)
+  - [DevFest SW Nigeria 2017 - Ibadan](https://www.eventbrite.com/e/devfest-sw-nigeria-2017-ibadan-tickets-38816981637)
+  - November 18 2017, Ibadan
 - [No internet, no problem](https://www.slideshare.net/AnnyceDavis/no-internet-no-problem)
   - [Droidcon NYC](https://www.nyc.droidcon.com/)
   - September 26 2017, New York City
@@ -73,6 +82,5 @@ title: Public Speaking
 ### 2014
   
 - [Getting with GIT](https://speakerdeck.com/moyheen/getting-with-git)
-  - GDays Nigeria
+  - [GDays Nigeria](https://www.eventbrite.com/e/gdays-nigeria-2014-developer-track-tickets-14569863855)
   - December 13 2014, Lagos
-
