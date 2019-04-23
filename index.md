@@ -2,6 +2,17 @@
 layout: default
 ---
 
+## Leveling Up as an Android Dev (Part 1)
+##### April 23, 2019
+
+![level-up](./assets/images/level-up.png)
+
+Chances are you were already a Software Engineer before switching to Android Development. You might also have learnt your first line of Kotlin solely in the bid to become an Android Developer. Regardless of how you started developing for Android, at some point, you'll need to start thinking about advancing to the next stage in your career.
+
+In this article, you'll see the evolution of an Android developer - from Junior, to Intermediate, to Senior and then to Team Lead and beyond. You will learn about what to expect at each stage and gain more insight into how to level up to the next stage.
+
+[Continue Reading](./leveling-up-as-an-android-dev.html)
+
 ## Behind The Scenes: DevFest Lagos app
 ##### Feb 27, 2019
 

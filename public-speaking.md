@@ -3,17 +3,14 @@ layout: default
 title: Public Speaking
 ---
 
-## Upcoming:
-- Leveling up as an Android Dev
-  - [Droidcon Boston](https://www.droidcon-boston.com/)
-  - April 9 2019, Boston
-
-
 ## Past:
 ### 2019
 
+- [Leveling up as an Android Dev](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev)
+  - [Droidcon Boston](https://droidcon-boston.com/)
+  - April 9 2019, Boston
 - Introduction
-  - [Women Techmakers Lagos Public Speaking Workshop](https://www.meetup.com/gdg-lagos/events/259355009/)
+  - [Women Techmakers Lagos Public Speaking Workshop](https://meetup.com/gdg-lagos/events/259355009/)
   - March 14 2019, Lagos
    
 ### 2018
@@ -22,25 +19,25 @@ title: Public Speaking
     - [DevFest OnAir](https://devfest.withgoogle.com/events/devfestonair18#schedule)
     - December 12  2018, Online
 - [Building Smarter Apps with MLKit](https://speakerdeck.com/moyheen/building-smarter-apps-with-mlkit)
-  - [DevFest Lagos](https://www.meetup.com/gdg-lagos/events/255085499/)
+  - [DevFest Lagos](https://meetup.com/gdg-lagos/events/255085499/)
   - November 3 2018, Lagos
-- [No internet, no problem](https://www.slideshare.net/AnnyceDavis/no-internet-no-problem)
+- [No internet, no problem](https://slideshare.net/AnnyceDavis/no-internet-no-problem)
   - [Droidcon Kenya](https://droidcon.co.ke/)
   - October 6 2018, Nairobi
 - [Building Smarter Apps with MLKit](https://speakerdeck.com/moyheen/building-smarter-apps-with-mlkit)
-  - [DevFest Nairobi](https://www.meetup.com/GDG-Nairobi/events/252860861/)
+  - [DevFest Nairobi](https://meetup.com/GDG-Nairobi/events/252860861/)
   - September 22 2018, Nairobi
   
 ### 2017  
 
 - [not so random android developer advice](https://speakerdeck.com/moyheen/not-so-random-android-developer-advice)
-  - [DevFest SW Nigeria 2017 - Ibadan](https://www.eventbrite.com/e/devfest-sw-nigeria-2017-ibadan-tickets-38816981637)
+  - [DevFest SW Nigeria 2017 - Ibadan](https://eventbrite.com/e/devfest-sw-nigeria-2017-ibadan-tickets-38816981637)
   - November 18 2017, Ibadan
-- [No internet, no problem](https://www.slideshare.net/AnnyceDavis/no-internet-no-problem)
-  - [Droidcon NYC](https://www.nyc.droidcon.com/)
+- [No internet, no problem](https://slideshare.net/AnnyceDavis/no-internet-no-problem)
+  - [Droidcon NYC](https://nyc.droidcon.com/)
   - September 26 2017, New York City
 - [Seeing is Believing: Mobile Vision API Deep Dive](https://speakerdeck.com/moyheen/seeing-is-believing-mobile-vision-api-deep-dive)
-  - [Droidcon NYC](https://www.nyc.droidcon.com/)
+  - [Droidcon NYC](https://nyc.droidcon.com/)
   - September 25 2017, New York City
 - [Working and Winning with Android Studio](https://speakerdeck.com/moyheen/working-and-winning-with-android-studio)
   - GDG Lagos Developer Conference 2017
@@ -82,5 +79,5 @@ title: Public Speaking
 ### 2014
   
 - [Getting with GIT](https://speakerdeck.com/moyheen/getting-with-git)
-  - [GDays Nigeria](https://www.eventbrite.com/e/gdays-nigeria-2014-developer-track-tickets-14569863855)
+  - [GDays Nigeria](https://eventbrite.com/e/gdays-nigeria-2014-developer-track-tickets-14569863855)
   - December 13 2014, Lagos
