@@ -2,6 +2,15 @@
 layout: default
 ---
 
+## Leveling Up as an Android Dev (Part 2)
+##### May 13, 2019
+
+![level-up](./assets/images/level-up.png)
+
+Here's the second (and last) article in the series of Leveling Up as an Android Dev. This article covers more about the other levels, what to expect and stories from experts in the Android Dev community.
+
+[Continue Reading](./leveling-up-as-an-android-dev-part-two.html)
+
 ## Leveling Up as an Android Dev (Part 1)
 ##### April 23, 2019
 
