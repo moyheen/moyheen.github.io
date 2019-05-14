@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Leveling Up as an Android Dev
+twitter_card_image: /assets/images/level-up.png
+header_image: /assets/images/level-up.png
 ---
 
 # Leveling Up as an Android Dev 
@@ -85,4 +87,4 @@ And help me, she did. She told me of how she slots her tasks into two hour time 
 
 This advice actually corresponds with the one in a chapter - Be responsive and productive - of [The Senior Software Engineer](https://www.amazon.com/Senior-Software-Engineer-Practices-Effective/dp/0990702804/ref=sr_1_1?keywords=senior+software+engineer&qid=1556017163&s=gateway&sr=8-1) book written by David Copeland. There, David talks about being responsive without sacrificing productivity. He recommends pro-actively scheduling interruptions and has research to back that up. His advice is to ensure that work is structured in such a way that it affords many good breaking points, and to create a reasonable schedule for checking email, instant messages, reviewing code and other interruptions.
 
-In the next article, I'll be sharing more about the other levels, what to expect and stories from experts in the Android Dev community.
+In the [next article](./leveling-up-as-an-android-dev-part-two.html), I'll be sharing more about the other levels, what to expect and stories from experts in the Android Dev community.

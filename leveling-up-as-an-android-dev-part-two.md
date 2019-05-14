@@ -10,7 +10,7 @@ excerpt: Here’s the second (and last) article in the series - Leveling Up as a
 
 ![level-up](./assets/images/level-up.png)
 
-Here's the second (and last) article in the series of Levling Up as an Android Dev. This article covers more about the other levels, what to expect and stories from experts in the Android Dev community.
+Here's the second (and last) article in the series of Leveling Up as an Android Dev. This article covers more about the other levels, what to expect and stories from experts in the Android Dev community. The first article can be found [here](./leveling-up-as-an-android-dev.html).
 
 ## Lead Android Dev
 
