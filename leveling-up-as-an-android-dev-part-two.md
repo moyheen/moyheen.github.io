@@ -3,6 +3,7 @@ layout: default
 title: Leveling Up as an Android Dev 2
 twitter_card_image: /assets/images/level-up.png
 header_image: /assets/images/level-up.png
+excerpt: Here’s the second (and last) article in the series - Leveling Up as an Android Dev. This article covers more about the other levels, what to expect and stories from experts in the Android Dev community.
 ---
 
 # Leveling Up as an Android Dev (Part 2)
