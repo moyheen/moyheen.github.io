@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Leveling Up as an Android Dev 2
+twitter_small_card_image: /assets/images/level-up.png
+header_image: /assets/images/level-up.png
 ---
 
 # Leveling Up as an Android Dev (Part 2)
