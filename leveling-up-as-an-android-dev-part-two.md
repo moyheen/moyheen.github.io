@@ -10,11 +10,11 @@ excerpt: Here’s the second (and last) article in the series - Leveling Up as a
 
 ![level-up](./assets/images/level-up.png)
 
-Here's the second (and last) article in the series of Leveling Up as an Android Dev. This article covers more about the other levels, what to expect and stories from experts in the Android Dev community. The first article can be found [here](./leveling-up-as-an-android-dev.html).
+Here's the second (and last) article in the series of Leveling Up as an Android Dev. This article covers more about the other levels, what to expect and stories from experts in the Android Dev community. The first article can be found [here](./leveling-up-as-an-android-dev.html) and the slides for the talk can be found [here](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev).
 
 ## Lead Android Dev
 
-![new-no-experience](./assets/images/new-no-experience.png)
+![lead](./assets/images/lead.png)
 
 A team lead is usually the most senior developer on the team and we're going to see how that applies to Android Development. While a Senior Android developer is usually focused on getting in quality code on time, a Lead Android Developer is now focused on getting a team of developers to check in quality code on time. They should be very familiar with the code base and contribute regularly to it. They are responsible for high level architectural decisions. They should understand the business problem, so they can have more impact on what the application does and how it will work. They should also empower their colleagues and mentor other developers on the team. They should be great communicators who are capable of leaving constructive feedback on technical work with empathy.
 
@@ -30,7 +30,7 @@ I spoke with Annyce Davis, a former Android Team Lead and she has this to say:
 
 ## Engineering Manager
 
-![intermediate](./assets/images/intermediate.png)
+![management](./assets/images/management.png)
 
 At this point you can decide to venture into management or remain an Individual Contributor, as a Senior Engineer. The book - The Manager's Path by Camille Fournier highlights all to expect from an Engineering Management position. It is platform agnostic and focused on a general Engineering path but it has a lot of useful information that can be applied to Android Development. Transitioning from an Android Tech Lead to an Engineering Manager requires a lot of support and resources from the company.
 
@@ -59,7 +59,7 @@ I spoke with Annyce again, and she had something to chip in here too.
 
 ## Other Stories
 
-![senior](./assets/images/senior.png)
+![other-stories](./assets/images/other-stories.png)
 
 So far, I've only written about the path to leveling up as an in house Android Developer. What happens in the case of independent developers and freelancers, or developers working at a software development agency? I spoke with two other experts in the Android Community and they had this to say.
 
@@ -85,4 +85,4 @@ She later decided to make the switch back to become an independent contributor a
 
 ## Conclusion
 
-In this article, I've attempted to highlight the progression paths in Android development from beginner up until management and back to individual contributor for anyone who wants that. Although I acknowledge that this might not hold true for everyone, I tried to show the shift in responsibilities that comes with each stage and linked to resources I found helpful. I also realize that this might have been a lot to absorb, but I think the most important thing is to accept that this is a journey and enjoy the process every step of the way.
+In this article series, I've attempted to highlight the progression paths in Android development from beginner up until management and back to individual contributor for anyone who wants that. While I acknowledge that this might not hold true for everyone, I've tried to show the shift in responsibilities that comes with each stage and linked to resources I found helpful. I also realize that this might have been a lot to absorb, but I think the most important thing is to accept that this is a journey and enjoy the process every step of the way.
