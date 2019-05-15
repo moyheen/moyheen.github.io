@@ -11,6 +11,8 @@ Here's the second (and last) article in the series of Leveling Up as an Android 
 
 [Continue Reading](./leveling-up-as-an-android-dev-part-two.html)
 
+* * *
+
 ## Leveling Up as an Android Dev (Part 1)
 ##### April 23, 2019
 
@@ -21,6 +23,8 @@ Chances are you were already a Software Engineer before switching to Android Dev
 In this article, you'll see the evolution of an Android developer - from Junior, to Intermediate, to Senior and then to Team Lead and beyond. You will learn about what to expect at each stage and gain more insight into how to level up to the next stage.
 
 [Continue Reading](./leveling-up-as-an-android-dev.html)
+
+* * *
 
 ## Behind The Scenes: DevFest Lagos app
 ##### Feb 27, 2019
