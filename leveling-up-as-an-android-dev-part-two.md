@@ -69,7 +69,7 @@ Chiuki is an independent Android Developer, Google Developer Expert and leader i
 
 ## Rebecca's story - Mobile Engineering Manager at Software Development Agency back to Individual Contributor
 
-Rebecca  worked at a software development agency where she grew from Intermediate to Senior Android Developer. At the time, she was working directly with a client through her agency and she was (and still is) actively contributing to the Android community by writing articles and releasing open source projects. These earned her the Android Google Developer Expert title and she was the woman from Africa to achieve that.
+Rebecca  worked at a software development agency where she grew from Intermediate to Senior Android Developer. At the time, she was working directly with a client through her agency and she was (and still is) actively contributing to the Android community by writing articles and releasing open source projects. These earned her the Android Google Developer Expert title and she was the first woman from Africa to achieve that.
 
 She then stopped work with the client company, returned to her company and was promoted to a Mobile Engineering Manager. The company being an agency meant there was no in - house team and her direct reports were all with different client companies.
 
