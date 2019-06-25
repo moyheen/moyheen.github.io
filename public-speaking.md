@@ -3,6 +3,12 @@ layout: default
 title: Public Speaking
 ---
 
+## Upcoming:
+
+- Using Kotlin Coroutines in an Android App
+  - [Google I/O Extended Lagos](https://www.meetup.com/gdg-lagos/events/261679500/)
+  - June 29 2019, Lagos
+
 ## Past:
 ### 2019
 
