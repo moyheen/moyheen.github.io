@@ -73,9 +73,11 @@
 
 <p><img src="./assets/images/dfm.png" alt="dfm" /></p>
 
-<p>At Zola Electric, we have started the process of splitting our app into dynamic features. As a result of this, we’ve been forced to have serious conversations about the structure of our app’s code and question a lot of our design decisions. The first step of the process - determining what features we wanted - was a bit easy for us because the code had already been grouped by features, but we found areas where we needed to rethink some of our implementation. This article (<a href="http://adavis.info/2019/06/dagger-multibinding-in-dynamic-feature-modules.html">Dagger Multibinding in Dynamic Feature Modules</a>) by <a href="https://twitter.com/brwngrldev">Annyce</a> explains one of such areas, where we had to update our process of handling Multibinding with Android Jobs.</p>
+<p>At Zola Electric, we have started the process of splitting our app into dynamic features. As a result of this, we’ve been forced to have serious conversations about the structure of our app’s code and question a lot of our design decisions.</p>
 
-<p>I’m going to walk through the steps involved with converting one of the modules and all the pain points experienced. This doesn’t not take into account all of the decisions we had to make but gives a high level overview of the process for anyone looking to get started.</p>
+<p>The first step of the process - determining what features we wanted - was a bit easy for us because the code had already been grouped by features, but we found areas where we needed to rethink some of our implementation. This article (<a href="http://adavis.info/2019/06/dagger-multibinding-in-dynamic-feature-modules.html">Dagger Multibinding in Dynamic Feature Modules</a>) by <a href="https://twitter.com/brwngrldev">Annyce</a> explains one of such areas, where we had to update our process of handling Multibinding with Android Jobs.</p>
+
+<p>I’m going to walk through the steps involved with converting one of the modules and all the pain points experienced. This does not take into account all the decisions we had to make but gives a high level overview of the process for anyone looking to get started.</p>
 
 <h2 id="create-and-configure-the-module">Create and configure the module</h2>
 
@@ -85,7 +87,7 @@
 
 <p><img src="./assets/images/configure-module.png" alt="configure-module" /></p>
 
-<p>An optional title may be added to the module. Here, you also determine whether the module should be available on-demand, and whether or not to install the module on devices without the appropriate support.</p>
+<p>An optional title may be added to the module. Here, you also determine whether the module should be available on-demand, and whether to install the module on devices without the appropriate support.</p>
 
 <p><img src="./assets/images/configure-options.png" alt="configure-options" /></p>
 
@@ -103,11 +105,11 @@
 
 <h2 id="the-layout-resources">The Layout resources</h2>
 
-<p>If module was given a title when it was created, a <code class="highlighter-rouge">strings.xml</code> file with that title would have been created  in the <code class="highlighter-rouge">res</code> folder of the new module. I had to relocate the respective layout files for the feature into the  <code class="highlighter-rouge">res</code> folder too.</p>
+<p>If the module was given a title when it was created, a <code class="highlighter-rouge">strings.xml</code> file with that title would have been created  in the <code class="highlighter-rouge">res</code> folder of the new module. I had to relocate the respective layout files for the feature into the  <code class="highlighter-rouge">res</code> folder too.</p>
 
 <h2 id="the-androidmanifestxml-file">The <code class="highlighter-rouge">AndroidManifest.xml</code> file</h2>
 
-<p>An <code class="highlighter-rouge">AndroidManifest.xml</code> file is generated for the new module but we had to update it. All the required permissions needed for the feature’s functionality were included as usual. We haven’t enabled instant modules or the on demand delivery system yet so we set those values to false.</p>
+<p>An <code class="highlighter-rouge">AndroidManifest.xml</code> file is generated for the new module, but we had to update it. All the required permissions needed for the feature’s functionality were included as usual. We haven’t enabled instant modules or the on demand delivery system yet, so we set those values to false.</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dist:module</span>
     <span class="na">dist:instant=</span><span class="s">"false"</span>
@@ -117,7 +119,7 @@
 <span class="nt">&lt;/dist:module&gt;</span>
 </code></pre></div></div>
 
-<p>I also relocated the feature specific <code class="highlighter-rouge">Activities</code> from the app’s <code class="highlighter-rouge">AndroidManifest.xml</code> file to the <code class="highlighter-rouge">AndroidManifest.xml</code> file in the newly created dynamic feature module. Everything remained the same except for the entry activity into that module which was called from the App module. Here, we had to create an activity with an intent filter.</p>
+<p>I also moved the feature specific <code class="highlighter-rouge">Activities</code> from the app’s <code class="highlighter-rouge">AndroidManifest.xml</code> file to the <code class="highlighter-rouge">AndroidManifest.xml</code> file in the newly created dynamic feature module. Everything remained the same except for the entry activity into that module which was called from the App module. Here, we had to create an activity with an intent filter.</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;activity</span>
     <span class="na">android:name=</span><span class="s">".DynamicFeatureActivity"</span><span class="nt">&gt;</span>
@@ -129,7 +131,9 @@
 
 <h2 id="the-classes">The Classes</h2>
 
-<p>I moved the related classes for the feature from the app module to the feature module. Since our app already followed a convention which we used for the other dynamic feature modules, all I had to do was ensure that this module conformed to it. We had to decide what classes to leave in the app module and what to move over. For example, we left all the repositories in the app module because before this, we had already split the database into its own feature module and only the app module depended on it. We also left the associated dagger module class, the events class and a couple of other helper classes in the app module.</p>
+<p>I moved the related classes for the feature from the app module to the feature module. Since our app already followed a convention which we used for the other dynamic feature modules, all I had to do was ensure that this module conformed to it.</p>
+
+<p>We had to decide what classes to leave in the app module and what to move over. For example, we left all the repositories in the app module because before this, we had already split the database into its own feature module and only the app module depended on it. We also left the associated dagger module class, the events class and a couple of other helper classes in the app module.</p>
 
 <h2 id="the-unit-tests">The Unit Tests</h2>
 
@@ -141,19 +145,19 @@
 
 <h2 id="the-distribution">The Distribution</h2>
 
-<p>Our app is now distributed via <code class="highlighter-rouge">bundles</code> on Google Play instead of <code class="highlighter-rouge">.apk</code> files as is required of apps with dynamic feature modules and we’re reaping the benefits already as the app size is already so much smaller. However, because of the regions we build for, we found that sometimes to save data costs the app files were distributed manually among our users and this led to crashes. This would have worked fine with the <code class="highlighter-rouge">.apk</code> files, but since bundles strip out all the unused resources before creating a device specific apk file, it meant a different device would not have all the required resources needed to run the app.</p>
+<p>Our app is now distributed via <code class="highlighter-rouge">bundles</code> on Google Play instead of <code class="highlighter-rouge">.apk</code> files as is required of apps with dynamic feature modules, and we’re reaping the benefits already as the app size is already so much smaller. However, because of the regions we build for, we found that sometimes to save data costs the app files were distributed manually among our users and this led to crashes. This would have worked fine with the <code class="highlighter-rouge">.apk</code> files, but since bundles strip out all the unused resources before creating a device specific apk file, it means a different device would not have all the required resources needed to run the app.</p>
 
 <p><img src="./assets/images/fabric.png" alt="fabric" /></p>
 
-<p>We also needed to update our CI configuration to still generate universal and Armeabi apk files needed for QA testing.</p>
+<p>We also needed to update our CI configuration to generate universal and Armeabi apk files needed for QA testing.</p>
 
 <h2 id="whats-next---instrumentation-tests">What’s next? - Instrumentation tests?</h2>
 
-<p>We’re currently working on creating a shared test module that will host all the instrumentation tests. To achieve this, we needed to extract a new core feature module from the base app module. This will act as the new base module and depend only on the database module. The app module and the shared test module will depend on the code module. We went through each file trying to determine if it should be migrated to the core module or left in the app module.</p>
+<p>We’re currently working on creating a shared test module that will host all the instrumentation tests. To achieve this, we needed to extract a new core feature module from the base app module. This will act as the new base module and depend only on the database module. The app module and the shared test module will depend on the code module. We went through each file trying to determine if it should be migrated to the core module or remain in the app module.</p>
 
 <h2 id="final-thoughts">Final thoughts</h2>
 
-<p>This is a lot of work, the kind that’s usually very important but not urgent. In the short term, we have to explain to the rest of the team that we were actually hard at work even though there’s no visible change in the app. In the long term however, we know that this is a huge step in the right direction as it is giving us the rare opportunity to go through our entire codebase and clean up legacy code. We’re also moving our app towards industry standards.</p>
+<p>This is a lot of work, the kind that’s usually very important but not urgent. In the short term, we have to explain to the rest of the team that we were actually hard at work even though there’s no visible change in the app. In the long term however, we know that this is a huge step in the right direction as it is giving us the rare opportunity to go through our entire codebase and clean up legacy code.</p>
 
 <p>We’re grateful to have resources from the community to guide us in the right direction - the <a href="https://github.com/android/plaid">Plaid app</a> and articles written by the Android Dev Rel team and other members of the community.</p>
 
