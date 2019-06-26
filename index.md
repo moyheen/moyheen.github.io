@@ -2,6 +2,19 @@
 layout: default
 ---
 
+## Dynamic Feature Modules 101
+##### June 25, 2019
+
+![dfm](./assets/images/dfm.png)
+
+At Zola Electric, we have started the process of splitting our app into dynamic features. As a result of this, we’ve been forced to have serious conversations about the structure of our app’s code and question a lot of our design decisions. The first step of the process - determining what features we wanted - was a bit easy for us because the code had already been grouped by features, but we found areas where we needed to rethink some of our implementation. This article ([Dagger Multibinding in Dynamic Feature Modules](http://adavis.info/2019/06/dagger-multibinding-in-dynamic-feature-modules.html)) by [Annyce](https://twitter.com/brwngrldev) explains one of such areas, where we had to update our process of handling Multibinding with Android Jobs.
+
+I’m going to walk through the steps involved with converting one of the modules and all the pain points experienced. This doesn’t not take into account all of the decisions we had to make but gives a high level overview of the process for anyone looking to get started.
+
+[Continue Reading](./dynamic-feature-modules-101.html)
+
+* * *
+
 ## Leveling Up as an Android Dev (Part 2)
 ##### May 13, 2019
 

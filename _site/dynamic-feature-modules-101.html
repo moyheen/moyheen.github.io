@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="/assets/css/style.css?v=" media="screen" type="text/css">
+	<link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css">
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Dynamic Feature Modules 101 | moyinoluwa</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Dynamic Feature Modules 101" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Android Dev 👩🏾‍💻 Conference Speaker 🗣 Marathoner 🏃🏾‍♀️" />
+<meta property="og:description" content="Android Dev 👩🏾‍💻 Conference Speaker 🗣 Marathoner 🏃🏾‍♀️" />
+<link rel="canonical" href="http://localhost:4000/dynamic-feature-modules-101.html" />
+<meta property="og:url" content="http://localhost:4000/dynamic-feature-modules-101.html" />
+<meta property="og:site_name" content="moyinoluwa" />
+<script type="application/ld+json">
+{"description":"Android Dev 👩🏾‍💻 Conference Speaker 🗣 Marathoner 🏃🏾‍♀️","@type":"WebPage","url":"http://localhost:4000/dynamic-feature-modules-101.html","headline":"Dynamic Feature Modules 101","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+	<header>
+		<div class="inner">
+			<a href="http://localhost:4000/">
+				<h1>moyinoluwa</h1>
+			</a>
+			<h2>Android Dev 👩🏾‍💻 Conference Speaker 🗣 Marathoner 🏃🏾‍♀️</h2>
+			
+			
+		</div>
+	</header>
+
+	<div id="content-wrapper">
+		<div class="inner clearfix">
+
+			<!--  twitter card meta data -->
+			<!--  page title -->
+			
+			<meta name="twitter:title" content="Dynamic Feature Modules 101" >
+			
+
+			<!--  twitter site -->
+			
+
+			<!--  description -->
+			
+
+			<!--  twitter large image -->
+			
+			<meta name="twitter:image" content="http://localhost:4000/assets/images/dfm.png" >
+			<meta name="twitter:card" content="summary_large_image" >
+			<meta name="twitter:site" content="@moyheen">
+			<meta name="twitter:creator" content="@moyheen">
+			
+
+			<!--  small twitter image -->
+			
+
+			<section id="main-content">
+				<h1 id="dynamic-feature-modules-101">Dynamic Feature Modules 101</h1>
+
+<p><img src="./assets/images/dfm.png" alt="dfm" /></p>
+
+<p>At Zola Electric, we have started the process of splitting our app into dynamic features. As a result of this, we’ve been forced to have serious conversations about the structure of our app’s code and question a lot of our design decisions. The first step of the process - determining what features we wanted - was a bit easy for us because the code had already been grouped by features, but we found areas where we needed to rethink some of our implementation. This article (<a href="http://adavis.info/2019/06/dagger-multibinding-in-dynamic-feature-modules.html">Dagger Multibinding in Dynamic Feature Modules</a>) by <a href="https://twitter.com/brwngrldev">Annyce</a> explains one of such areas, where we had to update our process of handling Multibinding with Android Jobs.</p>
+
+<p>I’m going to walk through the steps involved with converting one of the modules and all the pain points experienced. This doesn’t not take into account all of the decisions we had to make but gives a high level overview of the process for anyone looking to get started.</p>
+
+<h2 id="create-and-configure-the-module">Create and configure the module</h2>
+
+<p>To get started, right click on the root folder and select <code class="highlighter-rouge">New</code>, <code class="highlighter-rouge">Module</code> and then the  <code class="highlighter-rouge">Dynamic Feature Module</code>  option as displayed above.</p>
+
+<p>The module needs a name and a package name. Ensure that the base package name is the same as the app’s package name.</p>
+
+<p><img src="./assets/images/configure-module.png" alt="configure-module" /></p>
+
+<p>An optional title may be added to the module. Here, you also determine whether the module should be available on-demand, and whether or not to install the module on devices without the appropriate support.</p>
+
+<p><img src="./assets/images/configure-options.png" alt="configure-options" /></p>
+
+<p>A couple of changes are made in the project after the Finish button is clicked and a new package is added to the project’s root file.</p>
+
+<h2 id="the-buildgradle-file">The <code class="highlighter-rouge">build.gradle</code> file</h2>
+
+<p>A custom <code class="highlighter-rouge">build.gradle</code> file with a dependency on the selected base application module is created along with the new module. The new module will automatically be added to the existing <code class="highlighter-rouge">settings.gradle</code> file in the root folder like so <code class="highlighter-rouge">include ':app', ':dynamic_feature'</code>. The module will also be added to the list of dynamic features in the app level <code class="highlighter-rouge">build.gradle</code> file.</p>
+
+<p><code class="highlighter-rouge">dynamicFeatures = [":dynamic_feature"]</code></p>
+
+<p>In our app, I updated this build.gradle file to include only the required dependencies for the classes specific to the feature. We have a <code class="highlighter-rouge">.gradle</code> file in the root project that houses all the dependencies needed for tests and it was imported into the <code class="highlighter-rouge">build.gradle</code> file.</p>
+
+<p><code class="highlighter-rouge">apply from: '../core_test_dependencies.gradle'</code></p>
+
+<h2 id="the-layout-resources">The Layout resources</h2>
+
+<p>If module was given a title when it was created, a <code class="highlighter-rouge">strings.xml</code> file with that title would have been created  in the <code class="highlighter-rouge">res</code> folder of the new module. I had to relocate the respective layout files for the feature into the  <code class="highlighter-rouge">res</code> folder too.</p>
+
+<h2 id="the-androidmanifestxml-file">The <code class="highlighter-rouge">AndroidManifest.xml</code> file</h2>
+
+<p>An <code class="highlighter-rouge">AndroidManifest.xml</code> file is generated for the new module but we had to update it. All the required permissions needed for the feature’s functionality were included as usual. We haven’t enabled instant modules or the on demand delivery system yet so we set those values to false.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dist:module</span>
+    <span class="na">dist:instant=</span><span class="s">"false"</span>
+    <span class="na">dist:onDemand=</span><span class="s">"false"</span>
+    <span class="na">dist:title=</span><span class="s">"@string/title_dynamic_feature"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dist:fusing</span> <span class="na">dist:include=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/dist:module&gt;</span>
+</code></pre></div></div>
+
+<p>I also relocated the feature specific <code class="highlighter-rouge">Activities</code> from the app’s <code class="highlighter-rouge">AndroidManifest.xml</code> file to the <code class="highlighter-rouge">AndroidManifest.xml</code> file in the newly created dynamic feature module. Everything remained the same except for the entry activity into that module which was called from the App module. Here, we had to create an activity with an intent filter.</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;activity</span>
+    <span class="na">android:name=</span><span class="s">".DynamicFeatureActivity"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;intent-filter&gt;</span>
+        <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.intent.action.VIEW"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/intent-filter&gt;</span>
+<span class="nt">&lt;/activity&gt;</span>
+</code></pre></div></div>
+
+<h2 id="the-classes">The Classes</h2>
+
+<p>I moved the related classes for the feature from the app module to the feature module. Since our app already followed a convention which we used for the other dynamic feature modules, all I had to do was ensure that this module conformed to it. We had to decide what classes to leave in the app module and what to move over. For example, we left all the repositories in the app module because before this, we had already split the database into its own feature module and only the app module depended on it. We also left the associated dagger module class, the events class and a couple of other helper classes in the app module.</p>
+
+<h2 id="the-unit-tests">The Unit Tests</h2>
+
+<p>We migrated the unit tests and everything ran out of the box, except for a few snags. The first thing to note is that we needed to include a <code class="highlighter-rouge">resources</code> folder in the test package where we added the <code class="highlighter-rouge">MockMaker</code> file because this ensures that static classes can still be mocked. Some tests will fail if this is not done.</p>
+
+<p><img src="./assets/images/structure.png" alt="structure" /></p>
+
+<p>There was also <a href="https://issuetracker.google.com/issues/123441249">this issue</a> where JVM unit tests in the dynamic feature module were failing at runtime with a <code class="highlighter-rouge">NoClassDefFoundError</code> when run from the terminal, but they passed when run directly in Android Studio.</p>
+
+<h2 id="the-distribution">The Distribution</h2>
+
+<p>Our app is now distributed via <code class="highlighter-rouge">bundles</code> on Google Play instead of <code class="highlighter-rouge">.apk</code> files as is required of apps with dynamic feature modules and we’re reaping the benefits already as the app size is already so much smaller. However, because of the regions we build for, we found that sometimes to save data costs the app files were distributed manually among our users and this led to crashes. This would have worked fine with the <code class="highlighter-rouge">.apk</code> files, but since bundles strip out all the unused resources before creating a device specific apk file, it meant a different device would not have all the required resources needed to run the app.</p>
+
+<p><img src="./assets/images/fabric.png" alt="fabric" /></p>
+
+<p>We also needed to update our CI configuration to still generate universal and Armeabi apk files needed for QA testing.</p>
+
+<h2 id="whats-next---instrumentation-tests">What’s next? - Instrumentation tests?</h2>
+
+<p>We’re currently working on creating a shared test module that will host all the instrumentation tests. To achieve this, we needed to extract a new core feature module from the base app module. This will act as the new base module and depend only on the database module. The app module and the shared test module will depend on the code module. We went through each file trying to determine if it should be migrated to the core module or left in the app module.</p>
+
+<h2 id="final-thoughts">Final thoughts</h2>
+
+<p>This is a lot of work, the kind that’s usually very important but not urgent. In the short term, we have to explain to the rest of the team that we were actually hard at work even though there’s no visible change in the app. In the long term however, we know that this is a huge step in the right direction as it is giving us the rare opportunity to go through our entire codebase and clean up legacy code. We’re also moving our app towards industry standards.</p>
+
+<p>We’re grateful to have resources from the community to guide us in the right direction - the <a href="https://github.com/android/plaid">Plaid app</a> and articles written by the Android Dev Rel team and other members of the community.</p>
+
+<p>Do you have any comments or suggestions? <a href="https://twitter.com/moyheen">Please reach out on Twitter</a>.</p>
+
+			</section>
+
+			<aside id="sidebar">
+				<h2><a href="http://localhost:4000/">Home</a></h2>
+				<h2><a href="./about.html">About</a></h2>
+				<h2><a href="./public-speaking.html">Public Speaking</a></h2>
+				<h2><a href="./media.html">Videos and Podcasts</a></h2>
+
+
+				<br />
+				<br />
+
+				<p>I'm also on <a href="https://twitter.com/moyheen" target="_blank">Twitter</a>, <a href="https://github.com/moyheen" target="_blank">Github</a>, <a href="https://www.linkedin.com/in/moyinoluwa" target="_blank">LinkedIn</a> and <a href="https://speakerdeck.com/moyheen" target="_blank">SpeakerDeck</a></p>
+			</aside>
+		</div>
+	</div>
+
+	
+</body>
+</html>
