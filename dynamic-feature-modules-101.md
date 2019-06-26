@@ -3,6 +3,7 @@ layout: default
 title: Dynamic Feature Modules 101
 twitter_card_image: /assets/images/dfm.png
 header_image: /assets/images/dfm.png
+excerpt: At Zola Electric, we have started the process of splitting our app into dynamic features. I’m going to walk through the steps involved with converting one of the modules and all the pain points experienced. This gives a high level overview of the process for anyone looking to get started.
 ---
 
 # Dynamic Feature Modules 101
