@@ -71,8 +71,6 @@
 			<section id="main-content">
 				<h1 id="dynamic-feature-modules-101">Dynamic Feature Modules 101</h1>
 
-<p><img src="./assets/images/dfm.png" alt="dfm" /></p>
-
 <p>At Zola Electric, we have started the process of splitting our app into dynamic features. As a result of this, we’ve been forced to have serious conversations about the structure of our app’s code and question a lot of our design decisions.</p>
 
 <p>The first step of the process - determining what features we wanted - was a bit easy for us because the code had already been grouped by features, but we found areas where we needed to rethink some of our implementation. This article (<a href="http://adavis.info/2019/06/dagger-multibinding-in-dynamic-feature-modules.html">Dagger Multibinding in Dynamic Feature Modules</a>) by <a href="https://twitter.com/brwngrldev">Annyce</a> explains one of such areas, where we had to update our process of handling Multibinding with Android Jobs.</p>
@@ -80,6 +78,8 @@
 <p>I’m going to walk through the steps involved with converting one of the modules and all the pain points experienced. This does not take into account all the decisions we had to make but gives a high level overview of the process for anyone looking to get started.</p>
 
 <h2 id="create-and-configure-the-module">Create and configure the module</h2>
+
+<p><img src="./assets/images/dfm.png" alt="dfm" /></p>
 
 <p>To get started, right click on the root folder and select <code class="highlighter-rouge">New</code>, <code class="highlighter-rouge">Module</code> and then the  <code class="highlighter-rouge">Dynamic Feature Module</code>  option as displayed above.</p>
 
@@ -151,9 +151,9 @@
 
 <p>We also needed to update our CI configuration to generate universal and Armeabi apk files needed for QA testing.</p>
 
-<h2 id="whats-next---instrumentation-tests">What’s next? - Instrumentation tests?</h2>
+<h2 id="whats-next-instrumentation-tests">What’s next? Instrumentation tests?</h2>
 
-<p>We’re currently working on creating a shared test module that will host all the instrumentation tests. To achieve this, we needed to extract a new core feature module from the base app module. This will act as the new base module and depend only on the database module. The app module and the shared test module will depend on the code module. We went through each file trying to determine if it should be migrated to the core module or remain in the app module.</p>
+<p>We’re currently working on creating a shared test module that will host all the instrumentation tests. To achieve this, we needed to extract a new core feature module from the base app module. This will act as the new base module and depend only on the database module. The app module and the shared test module will depend on the core module. We went through each file trying to determine if it should be migrated to the core module or remain in the app module.</p>
 
 <h2 id="final-thoughts">Final thoughts</h2>
 
