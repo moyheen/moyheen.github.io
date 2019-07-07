@@ -1,4 +1,9 @@
 title: moyinoluwa
+name: Moyinoluwa's website
 description: Android Dev 👩🏾‍💻 Conference Speaker 🗣 Marathoner 🏃🏾‍♀️
-google_analytics:
+url: https://moyinoluwa.dev
+google_analytics: UA-143422084-1
 theme: jekyll-theme-architect
+feed_items: 10
+feed_update_period: daily
+feed_update_frequency: 1

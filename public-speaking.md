@@ -3,15 +3,18 @@ layout: default
 title: Public Speaking
 ---
 
-## Upcoming:
-
-- Using Kotlin Coroutines in an Android App
-  - [Google I/O Extended Lagos](https://www.meetup.com/gdg-lagos/events/261679500/)
-  - June 29 2019, Lagos
+<!--## Upcoming:-->
+<!---->
+<!--- Using Kotlin Coroutines in an Android App-->
+<!--  - [Google I/O Extended Lagos](https://www.meetup.com/gdg-lagos/events/261679500/)-->
+<!--  - June 29 2019, Lagos-->
 
 ## Past:
 ### 2019
 
+- [Using Kotlin Coroutines in an Android App](https://codelabs.developers.google.com/codelabs/kotlin-coroutines)
+  - [Google I/O Extended Lagos](https://www.meetup.com/gdg-lagos/events/261679500/)
+  - June 29 2019, Lagos
 - [Leveling up as an Android Dev](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev)
   - [Droidcon Boston](https://droidcon-boston.com/)
   - April 9 2019, Boston
