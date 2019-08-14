@@ -12,6 +12,9 @@ title: Public Speaking
 ## Past:
 ### 2019
 
+- [App Modularization: From Zero to Hero](https://speakerdeck.com/moyheen/app-modularization-from-zero-to-hero)
+  - [Droidcon Kenya](https://droidcon.co.ke/)
+  - August 9 2019, Nairobi
 - [Using Kotlin Coroutines in an Android App](https://codelabs.developers.google.com/codelabs/kotlin-coroutines)
   - [Google I/O Extended Lagos](https://www.meetup.com/gdg-lagos/events/261679500/)
   - June 29 2019, Lagos
