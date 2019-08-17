@@ -14,3 +14,4 @@ title: Videos and Podcasts
 
 ## I've also been on some podcasts
 - [African Developers Podcast - #4: Moyinoluwa Adeyemi](https://anchor.fm/africandev/episodes/4-Moyinoluwa-Adeyemi--Android-Developer-at-Zola-Electric-e3e51h)
+- [Pursuit Podcast - Finding Remote Work: Moyinoluwa Adeyemi](https://open.spotify.com/episode/6sKqEWMnEF5F1ULCr4RKw8)
