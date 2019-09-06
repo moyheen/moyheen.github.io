@@ -2,6 +2,17 @@
 layout: default
 ---
 
+## Project Phoenix
+##### September 6, 2019
+
+![phoenix](./assets/images/project-phoenix.png)
+
+After a long hiatus, I'm revisiting one of my very very old projects…. the [Yoruba Watch face app](https://play.google.com/store/apps/details?id=com.moyinoluwa.yorubawatchfaces) which is actually a watch face *and* a mobile app with a home screen widget.
+
+[Continue Reading](./project-phoenix.html)
+
+* * *
+
 ## Dynamic Feature Modules 101
 ##### June 25, 2019
 
