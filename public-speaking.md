@@ -3,15 +3,17 @@ layout: default
 title: Public Speaking
 ---
 
-<!--## Upcoming:-->
-<!---->
-<!--- Using Kotlin Coroutines in an Android App-->
-<!--  - [Google I/O Extended Lagos](https://www.meetup.com/gdg-lagos/events/261679500/)-->
-<!--  - June 29 2019, Lagos-->
+## Upcoming
+- [Leveling up as an Android Dev](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev)
+  - [GDG Devfest Nairobi 2019](https://devfest.gdgnairobi.com/)
+  - October 19 2019, Nairobi
 
 ## Past:
 ### 2019
 
+- Android Technology for Startups
+  - [GBG Startup Jam](https://ikeja.gbgnigeria.org/events/startup-jam)
+  - September 28 2019, Lagos
 - [App Modularization: From Zero to Hero](https://speakerdeck.com/moyheen/app-modularization-from-zero-to-hero)
   - [Droidcon Kenya](https://droidcon.co.ke/)
   - August 9 2019, Nairobi
