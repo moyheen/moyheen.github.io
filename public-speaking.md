@@ -3,14 +3,19 @@ layout: default
 title: Public Speaking
 ---
 
+<!---
 ## Upcoming
-- [Leveling up as an Android Dev](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev)
+#- [Leveling up as an Android Dev](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev)
   - [GDG DevFest Nairobi 2019](https://devfest.gdgnairobi.com/)
   - October 19 2019, Nairobi
+-->
 
 ## Past:
 ### 2019
 
+- [Leveling up as an Android Dev](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev)
+  - [GDG DevFest Nairobi 2019](https://devfest.gdgnairobi.com/)
+  - October 19 2019, Nairobi
 - Android Technology for Startups
   - [GBG Startup Jam](https://ikeja.gbgnigeria.org/events/startup-jam)
   - September 28 2019, Lagos
