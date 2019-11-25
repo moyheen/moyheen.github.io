@@ -14,6 +14,9 @@ title: Public Speaking
 ### 2019
 
 - [Leveling up as an Android Dev](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev)
+  - [GDG DevFest Ikorodu 2019](https://www.meetup.com/gdg_ikorodu/events/264546086/)
+  - November 16 2019, Lagos
+- [Leveling up as an Android Dev](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev)
   - [GDG DevFest Nairobi 2019](https://devfest.gdgnairobi.com/)
   - October 19 2019, Nairobi
 - Android Technology for Startups
