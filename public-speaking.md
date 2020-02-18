@@ -6,15 +6,17 @@ title: Public Speaking
 
 ## Upcoming:
 ### 2020
-- Multithreading and Networking on Android
-  - Stutern Graduate Accelerator 0.7 Android development guest session
-  - February 18 2020, Lagos
 - Keynote Address - My journey to becoming an Android GDE
   - [Open Source Festival 2020](https://oscafest.sched.com/event/a8RU/my-journey-to-becoming-an-android-gde?iframe=yes&w=100%&sidebar=yes&bg=no#)
   - February 21 2020, Lagos
 
 
 ## Past:
+### 2020
+- [Multithreading and Networking on Android](https://speakerdeck.com/moyheen/stutern-graduate-accelerator-0-dot-7-android-development-guest-session-introduction-to-multithreading-and-networking-on-android)
+  - Stutern Graduate Accelerator 0.7 Android development guest session
+  - February 18 2020, Lagos
+  
 ### 2019
 
 - [Leveling up as an Android Dev](https://speakerdeck.com/moyheen/leveling-up-as-an-android-dev)
